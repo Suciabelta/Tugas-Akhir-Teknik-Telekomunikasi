@@ -34,12 +34,12 @@ int perCent;
 // ===========================
 // Konversi MLX90612 ke Termometer Standar
 float regresiSuhu(float mlxValue) {
-  return (mlxValue + 12.462) / 1.3419;
+  return (mlxValue - 13.279) / 1.3445;
 }
 
 // Konversi HR Sensor ke Standar HR
 float regresiHR(float sensorHR) {
-  return (sensorHR + 21.184) / 1.2051;
+  return (sensorHR + 11.48) / 0.7317;
 }
 
 void setup() {
